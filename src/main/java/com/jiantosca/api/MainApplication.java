@@ -10,22 +10,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MainApplication {
 
-    public static void main(String[] args) {
-        System.out.println("Let's see sonar complain :)");
+	public static void main(String[] args) {
+		System.out.println("Let's see sonar complain :)");
 
-        // SpringApplication.run(MainApplication.class, args);
+		// SpringApplication.run(MainApplication.class, args);
 
-        var app = new SpringApplication(MainApplication.class);
-        app.addListeners(new GlobalApplicationEventListener());
-        var configurableAppCtx = app.run(args);
-    }
+		var app = new SpringApplication(MainApplication.class);
+		app.addListeners(new GlobalApplicationEventListener());
+		var configurableAppCtx = app.run(args);
+	}
 
-    @PostConstruct
-    void postConstruct() {
-        log.info("Entering postConstruct()");
-        log.info("Testing sonar so adding more code for no reason");
-        log.info("Testing sonar so adding more code for no reason");
-        log.info("Testing sonar so adding more code for no reason");
-        log.info("Testing sonar so adding more code for no reason");
-    }
+	@PostConstruct
+	void postConstruct() {
+		log.info("Entering postConstruct()");
+		log.info("Testing sonar so adding more code for no reason");
+		log.info("Testing sonar so adding more code for no reason");
+		log.info("Testing sonar so adding more code for no reason");
+		log.info("Testing sonar so adding more code for no reason");
+	}
 }

@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class AwsApiReactiveApplicationTests {
 
-    @Test
-    void contextLoads() {}
+	@Test
+	void contextLoads() {
+	}
 }

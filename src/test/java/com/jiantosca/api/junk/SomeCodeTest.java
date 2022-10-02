@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 
 public class SomeCodeTest {
 
-    @Test
-    public void test() {
-        var oneMore = new SomeCode("myId");
+	@Test
+	public void test() {
+		var oneMore = new SomeCode("myId");
 
-        assertTrue(oneMore.doSomething().contains("myId"));
+		assertTrue(oneMore.doSomething().contains("myId"));
 
-        assertSame(oneMore.getId(), "myId");
+		assertSame(oneMore.getId(), "myId");
 
-        assertTrue(oneMore.toString().contains("myId"));
-    }
+		assertTrue(oneMore.toString().contains("myId"));
+	}
 }

@@ -17,14 +17,14 @@ import reactor.core.publisher.Mono;
 @Configuration
 public class RouteConfig {
 
-    @Value("${spring.application.name}")
-    String appName;
+	@Value("${spring.application.name}")
+	String appName;
 
-    @Bean
-    public RouterFunction<ServerResponse> testRoute() {
-        log.debug("creating /test router function.");
-        return RouterFunctions.route(GET("/test").and(accept(MediaType.ALL)), serverReq -> ServerResponse.ok()
-                .contentType(MediaType.TEXT_PLAIN)
-                .body(Mono.just(String.format("Ok (from app named %s)", appName)), String.class));
-    }
+	@Bean
+	public RouterFunction<ServerResponse> testRoute() {
+		log.debug("creating /test router function.");
+		return RouterFunctions.route(GET("/test").and(accept(MediaType.ALL)),
+				serverReq -> ServerResponse.ok().contentType(MediaType.TEXT_PLAIN)
+						.body(Mono.just(String.format("Ok (from app named %s)", appName)), String.class));
+	}
 }

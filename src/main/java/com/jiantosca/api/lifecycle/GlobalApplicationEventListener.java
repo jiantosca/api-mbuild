@@ -7,11 +7,9 @@ import org.springframework.context.ApplicationListener;
 @Slf4j
 public class GlobalApplicationEventListener implements ApplicationListener<ApplicationEvent> {
 
-    @Override
-    public void onApplicationEvent(ApplicationEvent event) {
-        log.debug(
-                "Got an ApplicationEvent of type {}, from source {}",
-                event.getClass().getSimpleName(),
-                event.getSource());
-    }
+	@Override
+	public void onApplicationEvent(ApplicationEvent event) {
+		log.debug("Got an ApplicationEvent of type {}, from source {}", event.getClass().getSimpleName(),
+				event.getSource());
+	}
 }
